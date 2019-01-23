@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Елизавета Сенькова](https://up.htmlacademy.ru/htmlcss/24/user/931725).
-* Наставник: [Stepan Kurkin](https://htmlacademy.ru/profile/id922331).
+* Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/stakeout).
 
 ---
 
