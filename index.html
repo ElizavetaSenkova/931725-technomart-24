@@ -12,19 +12,20 @@
        <div class="logo">
          <a>Техномарт</a>
        </div>
-       <form action="" method="GET">
-         <input type="">
-         <button>
-           <!--Вставить иконку поиска(swg)-->
-         </button>
-        </form>
+       <!--Форма поиска-->
+       <form action="#" method="GET">
+         <label>
+           Поиск:
+           <input type="search" name="search">
+         </label>
+       </form>
        <a class="bookmarks">Закладки: 0</a>
        <a class="basket">Корзина: <span>0</span></a>
        <a class="order-registration">Оформить заказ</a>
     </div>
 
     <div class="middle-header">
-      <h1 class="main-page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+      <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <div class="header-contacts">
          <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
          <p class="address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -116,6 +117,33 @@
       <a class="academy" href="htmlacademy.ru">htmlacademy.ru</a></p>
     </div>
   </footer>
+
+                                                    <!--ПОПАПЫ-->
+  <section class="write-letter">
+  <h2 class="visually-hidden">Форма отправки письма на почту Техномарта</h2>
+  <form action="#" method="POST">
+    
+      <p><label for="name-field">Ваше имя:</label></p>
+      <p><input type="text" name="name" id="name-field" placeholder="Имя Фамилия"></p>
+
+      <p><label for="email-field"></label></p>
+      <p><input type="email" name="email" id="email-field" placeholder="email@example.com"></p>
+    
+      <p><label for="">Текст письма:</label></p>
+      <p><textarea name="text-letter" rows="6" id="text-letter-field">В свободной форме</textarea></p>
+
+     <button class="button">Отправить</button>
+  </form>
+  <button class="close" aria-label="Закрыть форму отправки письма на почту Техномарта"></button>
+  </section>
+
+
+  
+  <section class="map-popap">
+  <h2 class="visually-hidden">Карта местоположения офиса Техномарт</h2>
+  <img src="img/map-popap.jpg" width="940" height="446" alt="Карта офиса по адресу ул. Б. Конюшенная, д. 19/8">
+  <button class="close" aria-label="Закрыть карту"></button>
+  </section>
 
   </body>
 </html>
