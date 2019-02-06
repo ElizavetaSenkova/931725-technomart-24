@@ -9,15 +9,13 @@
   <header class="main-header">
 
     <div class="top-header">
-       <div class="logo">
+      <div class="logo">
          <a>Техномарт</a>
-       </div>
-       <!--Форма поиска-->
-       <form action="#" method="GET">
-         <label>
-           Поиск:
-           <input type="search" name="search">
-         </label>
+      </div>
+      <!--Форма поиска-->
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <input type="search" name="search" placeholder="Поиск:">
+        <button></button>
        </form>
        <a class="bookmarks">Закладки: 0</a>
        <a class="basket">Корзина: <span>0</span></a>
@@ -31,8 +29,8 @@
          <p class="address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
       <ul class="enter-registration-list">
-        <li class="enter-registration-item">Войти</li>
-        <li class="enter-registration-item">Регистрация</li>
+        <li class="enter-registration-item"><a href="login.html" class="login-link">Войти</a></li>
+        <li class="enter-registration-item"><a href="reg.html" class="reg-link">Регистрация</a></li>
       </ul>
     <nav class="main-nav">
       <ul class="main-nav-list">
@@ -70,7 +68,7 @@
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами,<br>
       заехав в наш офис:</p>
-      <img src="img/map.jpg" width="300" height="158" alt="Карта офиса по адресу ул. Б. Конюшенная, д. 19/8">
+      <img src="img/map.jpg" width="300" height="158" alt="Карта офиса по адресу ул. Б. Конюшенная, д. 19/8, г.Санкт-Петербург">
       <a class="button" href="#">Заблудились?Напишите нам!</a>
     </section>
     </div>
@@ -107,42 +105,68 @@
      <p>© 2010-2017 Компания "Техномарт"
        Все права защищены</p>
         <ul class="social-networks">
-         <li><a class="social-button" href="#" aria-label="Техномарт во Вконтакте"></a></li>
-         <li><a class="social-button" href="#" aria-label="Техномарт на Facebook"></a></li>
-         <li><a class="social-button" href="#" aria-label="Техномарт в Instagram"></a></li> 
+
+         <li>
+           <a class="social-button" href="#" aria-label="Техномарт во Вконтакте">
+             <span class="visually-hidden">Вконтакте</span>
+           </a>
+         </li>
+
+         <li>
+           <a class="social-button" href="#" aria-label="Техномарт на Facebook">
+             <span class="visually-hidden">Facebook</span>
+           </a>
+         </li>
+
+         <li>
+           <a class="social-button" href="#" aria-label="Техномарт в Instagram">
+             <span class="visually-hidden">Instagram</span>
+           </a>
+         </li>
+          
         </ul>
       <p>Обратная связь:
       <a class="email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
       <p>Разработано -
-      <a class="academy" href="htmlacademy.ru">htmlacademy.ru</a></p>
+      <a class="academy" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
     </div>
   </footer>
 
                                                     <!--ПОПАПЫ-->
   <section class="write-letter">
   <h2 class="visually-hidden">Форма отправки письма на почту Техномарта</h2>
-  <form action="#" method="POST">
+  <button class="close" type="button" aria-label="Закрыть форму отправки письма на почту Техномарта">X</button>
+  <form action="https://echo.htmlacademy.ru" method="post">
     
-      <p><label for="name-field">Ваше имя:</label></p>
-      <p><input type="text" name="name" id="name-field" placeholder="Имя Фамилия"></p>
+      <p>
+        <label for="name-field">Ваше имя:</label>
+        <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+      </p>
 
-      <p><label for="email-field"></label></p>
-      <p><input type="email" name="email" id="email-field" placeholder="email@example.com"></p>
+      <p>
+        <label for="email-field">Ваш e-mail:</label>
+        <input type="email" name="email" id="email-field" placeholder="email@example.com">
+      </p>
     
-      <p><label for="">Текст письма:</label></p>
-      <p><textarea name="text-letter" rows="6" id="text-letter-field">В свободной форме</textarea></p>
+      <p>
+        <label for="message-field">Текст письма:</label>
+        <textarea name="message" rows="6" id="message-field" placeholder="В свободной форме"></textarea>
+      </p>
 
      <button type="submit" class="button">Отправить</button>
   </form>
-  <button class="close" aria-label="Закрыть форму отправки письма на почту Техномарта"></button>
+  
   </section>
 
 
 
   <section class="map-popap">
-  <h2 class="visually-hidden">Карта местоположения офиса Техномарт</h2>
-  <img src="img/map-popap.jpg" width="940" height="446" alt="Карта офиса по адресу ул. Б. Конюшенная, д. 19/8">
-  <button class="close" aria-label="Закрыть карту"></button>
+    <h2 class="visually-hidden">Карта местоположения офиса Техномарт</h2>
+    <button class="close" type="button" aria-label="Закрыть карту">X</button>
+    <div class="img-map-popap">
+      <img src="img/map-popap.jpg" width="940" height="446" alt="Карта офиса по адресу 
+      ул. Б. Конюшенная, д. 19/8, г.Санкт-Петербург">
+    </div>
   </section>
 
   </body>
