@@ -1,7 +1,7 @@
 body {
     margin: 0;
 
-    font-family: 'Cuprum', 'PT Sans', Arial, sans-serif;
+    font-family: 'Cuprum', Arial, sans-serif;
     font-size: 17px;
     line-height: 17px;
     font-weight: 400;
@@ -13,7 +13,7 @@ body {
 a {
     text-decoration: none;
 }
-
+                                                  /*ШАПКА*/
 .top-header {
     line-height: 18px;
     color: white;
@@ -106,4 +106,109 @@ a.reg-link {
 
 .main-nav-list {
     list-style: none;
+}
+
+                                               /*ОСНОВНОЕ СОДЕРЖАНИЕ*/
+.company-and-contacts {
+    color: black;
+
+    background-color: white;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+}                         
+
+.company-technomart p,
+.contacts p {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.company-technomart-list li {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.button {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    color: white;
+
+    background-color: #ee3643;
+}
+                                            /*ПОДВАЛ*/
+                    /*TOP-ROW*/                                           
+.top-row {
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #f3f7f9;
+
+    background-color: #32425c;
+}
+
+.footer-nav a{
+    color: #f3f7f9;;
+
+    background-color: #32425c;
+}
+
+.footer-nav-list {
+    list-style: none;
+}
+
+                    /*MIDDLE-ROW*/
+.middle-row {
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #f3f7f9;
+
+    background-color: #32425c;
+}
+
+.footer-menu a {
+    color: #ffd180;
+
+    background-color: #32425c;
+}
+
+.footer-menu {
+    list-style: none;
+}
+
+                    /*BOTTOM-ROW*/
+.bottom-row {
+    font-size: 16px;
+    line-height: 18px;
+
+    color: white;
+
+    background-color: #293449;
+}
+
+.social-networks {
+    list-style: none;
+}
+
+a.email,
+a.academy {
+    color: #ffd180;
+
+    background-color: #293449;
+}
+                                               /*ПОПАПЫ*/
+.write-letter {
+    display: none;
+}
+
+.map-popap {
+    display: none;
 }
