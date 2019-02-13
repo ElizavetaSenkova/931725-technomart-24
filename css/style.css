@@ -29,8 +29,43 @@ a {
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
+.logo:hover {
+    background-color: #ca2c37;
+}
+
+.logo:active {
+    background-color: #ba2732;
+}
+
 input[type="search"] {
     background-color: #293449;
+    border: none;
+}
+
+input[type="search"]:hover {
+    background-color: #212a3a;
+}
+
+input[type="search"]:focus {
+    background-color: white;
+}
+
+.bookmarks:hover,
+.basket:hover {
+    background-color: #212a3a;
+}
+
+.bookmarks:active,
+.basket:active {
+    background-color: #161d29;
+}
+
+.order-registration:hover {
+    background-color: #5fbb2d;
+}
+
+.order-registration:active {
+    background-color: #518534;
 }
 
 .order-registration {
@@ -91,7 +126,15 @@ a.reg-link {
     background-color: white;
 }
 
+.login-link:hover,
+.reg-link:hover {
+    color: #ee3643;
+}
 
+.login-link:active,
+.reg-link:active {
+    color: rgba(0, 0, 0, 0.3);
+}
 
 .top-header a,
 .main-nav a {
@@ -106,6 +149,16 @@ a.reg-link {
 
 .main-nav-list {
     list-style: none;
+}
+
+.main-nav a:hover {
+    background-color: #293449;
+}
+
+.main-nav a:active {
+    color: rgba(255, 255, 255, 0.5); 
+
+    background-color: #1d2739;
 }
 
                         /*ОСНОВНОЕ СОДЕРЖАНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -164,6 +217,17 @@ h2 {
     list-style: none;
 }
 
+.footer-nav-list a:hover,
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav-list a:active {
+    color: rgba(241, 245, 247, 0.5);
+
+    text-decoration: none;
+}
+
 /*MIDDLE-ROW*/
 .middle-row {
     font-size: 18px;
@@ -184,6 +248,12 @@ h2 {
     list-style: none;
 }
 
+.footer-menu a:active {
+    color: rgba(255, 209, 128, 0.5);
+
+    text-decoration: none;
+}
+
  /*BOTTOM-ROW*/
 .bottom-row {
     font-size: 16px;
@@ -198,12 +268,25 @@ h2 {
     list-style: none;
 }
 
-a.email,
-a.academy {
+.email,
+.academy {
     color: #ffd180;
 
     background-color: #293449;
 }
+
+.email:hover,
+.academy:hover {
+    text-decoration: underline;
+}
+
+.email:active,
+.academy:active {
+    color: #ee3643;
+
+    text-decoration: none;
+}
+
                         /*ПОПАПЫ*/
 .write-letter {
     display: none;
@@ -225,7 +308,7 @@ a.academy {
     list-style: none;
 }
 
-.current-account {
+.current-account a {
     font-size: 21px;
     line-height: 21px;
 
@@ -243,6 +326,16 @@ a.academy {
     background-color: #f4f7f9;
     text-decoration: underline;
 }
+
+.orders-account-item a:hover {
+    color: #ee3643;
+}
+
+.orders-account-item a:active,
+.current-account a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
                         /*ОСНОВНОЕ СОДЕРЖАНИЕ ВНУТРЕННЕЙ СТРАНИЦЫ*/
 .breadcrumbs-item a {
     font-family: 'PT Sans', Arial, sans-serif;
@@ -346,6 +439,10 @@ fieldset li {
     color: white;
 }
 
+.catalog-item:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
 .buy-hidden {
     font-size: 14px;
     line-height: 18px;
@@ -355,6 +452,15 @@ fieldset li {
 
     box-shadow: inset 0px -3px 0 0 #367315;
     background-color: #63a63e;
+}
+
+.buy-hidden:hover {
+    box-shadow: inset 0px -3px 0 0 #367315;
+    background-color: #5fbb2d;
+}
+
+.buy-hidden:active {
+    background-color: #518534;
 }
 
 .bookmarks-hidden {
@@ -367,6 +473,17 @@ fieldset li {
     background-color: white;
     border: 3px solid #63a63e;
 }
+
+.bookmarks-hidden:hover {
+    border: 3px solid #32425c;
+}
+
+.bookmarks-hidden:active {
+    color: rgba(50, 66, 92, 0.3);
+
+    border: 3px solid rgba(50, 66, 92, 0.3);
+}
+
                        /*ПОПАПЫ*/
 .item-status {
     display: none;
