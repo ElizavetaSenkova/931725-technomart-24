@@ -12,30 +12,37 @@
   <header class="main-header">
 
     <div class="top-header">
-      <div class="logo">
-        <a href="index.html">Техномарт</a>
+      <div class="top-header-wrapper">
+        <div class="logo">
+          <a href="index.html">Техномарт</a>
+        </div>
+        <!--Форма поиска-->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input type="search" name="search" placeholder="Поиск:" aria-label="Поиск по сайту">
+          <button></button>
+        </form>
+        <a class="bookmarks" href="#">Закладки: 0</a>
+        <a class="full-basket" href="#">Корзина: <span>10</span></a>
+        <a class="order-registration" href="#">Оформить заказ</a>
       </div>
-      <!--Форма поиска-->
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <input type="search" name="search" placeholder="Поиск:" aria-label="Поиск по сайту">
-        <button></button>
-      </form>
-      <a class="bookmarks" href="#">Закладки: 0</a>
-      <a class="full-basket" href="#">Корзина: <span>10</span></a>
-      <a class="order-registration" href="#">Оформить заказ</a>
     </div>
 
     <div class="middle-header">
-      <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-      <div class="header-contacts">
-            <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
-            <p class="address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      </div>
-      <ul class="user-zone">
+      <div class="middle-header-wrapper">
+        <h1>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
+        <div class="header-contacts">
+          <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <p class="address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <ul class="user-zone">
           <li class="current-account"><a href="#">Равшан Джамшутович</a></li>
           <li class="orders-account-item"><a href="#">Мои заказы</a></li>
           <li class="orders-account-item"><a href="#">Личный кабинет</a></li>
-      </ul>
+        </ul>
+      </div> 
+    </div>
+
+
     <nav class="main-nav">
       <ul class="main-nav-list">
          <li><a href="index.html">Главная</a></li>
@@ -47,7 +54,7 @@
          <li><a href="#">Контакты</a></li>  
       </ul>
     </nav>
-    </div>
+    
   </header>
                                                  <!--ОСНОВНОЕ СОДЕРЖАНИЕ-->
    <main class="main-content">

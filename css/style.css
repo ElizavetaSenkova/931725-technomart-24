@@ -22,9 +22,6 @@ a {
 }
 
 .logo {
-    width: 220px;
-    height: 47px;
-
     background-color: #ee3643;
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
@@ -161,6 +158,81 @@ a.reg-link {
     background-color: #1d2739;
 }
 
+
+
+/*СЕТОЧНЫЕ СТИЛИ*/
+
+html,
+body {
+    min-width: 1200px;
+}
+
+/*СЕТКА ШАПКИ*/
+
+.top-header {
+    margin-bottom: 46px;
+}
+
+.top-header-wrapper {
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.logo {
+    width: 220px;
+    height: 47px;
+}
+
+input[type="search"] {
+    margin-left: 49px;
+}
+
+.bookmarks {
+    margin-left: 224px;
+}
+
+.full-basket {
+    margin-left: 78px;
+}
+
+.middle-header {
+    margin-bottom: 40px;
+}
+
+.middle-header-wrapper {
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+h1,
+address {
+    margin: 0;
+}
+
+.enter-registration-list {
+    margin: 0;
+    padding: 0;
+}
+
+.user-zone {
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.main-nav-list {
+    margin: 0;
+    padding: 0;
+}
                         /*ОСНОВНОЕ СОДЕРЖАНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
 .company-and-contacts {
     color: black;
@@ -195,6 +267,14 @@ h2 {
     color: white;
 
     background-color: #ee3643;
+}
+
+/*СЕТКА ГЛАВНОЙ СТРАНИЦЫ*/
+
+.main-content {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
                                 /*ПОДВАЛ*/
  /*TOP-ROW*/                                           
