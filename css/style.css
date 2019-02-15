@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
 
@@ -10,10 +18,22 @@ body {
     background-color: white;
 }
 
+.container {
+    width: 960px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
 }
                                 /*ШАПКА*/
+.main-header {
+    padding-bottom: 60px;
+
+    background-color: #f4f7f9;
+}
+
 .top-header {
     line-height: 18px;
     color: white;
@@ -21,7 +41,14 @@ a {
     background-color: #293449;
 }
 
+.top-header-wrapper {
+    display: flex;
+}
+
 .logo {
+    width: 220px;
+    height: 47px;
+
     background-color: #ee3643;
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
@@ -45,6 +72,14 @@ input[type="search"]:hover {
 
 input[type="search"]:focus {
     background-color: white;
+}
+
+input[type="search"]::-webkit-input-placeholder {color: white;}
+input[type="search"]::-moz-placeholder          {color: white;}/* Firefox 19+ */
+input[type="search"]:-ms-input-placeholder      {color: white;}
+
+.search-form button {
+    padding: 0;
 }
 
 .bookmarks:hover,
@@ -75,18 +110,23 @@ input[type="search"]:focus {
 }
 
 .middle-header {
-    background-color: #f4f7f9;
+    padding-top: 46px;
+    padding-bottom: 40px;
 }
 
-h1 {
+.middle-header-wrapper {
+    display: flex;
+}
+
+.middle-header h1 {
+    margin: 0;
+
     font-style: italic;
     font-size: 16px;
     line-height: 23px;
     font-weight: normal;
     
     color: #ee3643;
-
-    background-color: #f4f7f9;
 }
 
 .phone-number {
@@ -96,20 +136,21 @@ h1 {
     border: 3px solid white;
 
     color: #ee3643;
-
-    background-color: #f4f7f9;
 }
 
 .address {
+    margin: 0;
+
     font-size: 14px;
     line-height: 24px;
 
     color: #32425c;
-
-    background-color: #f4f7f9;
 }
 
 .enter-registration-list {
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -145,6 +186,10 @@ a.reg-link {
 }
 
 .main-nav-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -158,89 +203,23 @@ a.reg-link {
     background-color: #1d2739;
 }
 
-
-
-/*СЕТОЧНЫЕ СТИЛИ*/
-
-html,
-body {
-    min-width: 1200px;
-}
-
-/*СЕТКА ШАПКИ*/
-
-.top-header {
-    margin-bottom: 46px;
-}
-
-.top-header-wrapper {
-    display: flex;
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
-.logo {
-    width: 220px;
-    height: 47px;
-}
-
-input[type="search"] {
-    margin-left: 49px;
-}
-
-.bookmarks {
-    margin-left: 224px;
-}
-
-.full-basket {
-    margin-left: 78px;
-}
-
-.middle-header {
-    margin-bottom: 40px;
-}
-
-.middle-header-wrapper {
-    display: flex;
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
-h1,
-address {
-    margin: 0;
-}
-
-.enter-registration-list {
-    margin: 0;
-    padding: 0;
-}
-
-.user-zone {
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav {
-    display: flex;
-    width: 940px;
-    margin: 0 auto;
-}
-
-.main-nav-list {
-    margin: 0;
-    padding: 0;
-}
                         /*ОСНОВНОЕ СОДЕРЖАНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
 .company-and-contacts {
-    color: black;
+    display: flex;
+    padding-top: 82px;
+    padding-bottom: 86px; 
 
-    background-color: white;
+    color: black;
 }
 
-h2 {
+.company-technomart {
+    width: 519px;
+}
+
+.company-technomart h2,
+.contacts h2 {
+    margin: 0;
+
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
@@ -249,14 +228,28 @@ h2 {
 
 .company-technomart p,
 .contacts p {
+    margin: 0;
+
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
 }
 
+.company-technomart-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
 .company-technomart-list li {
     font-size: 18px;
     line-height: 20px;
+}
+
+.contacts {
+    width: 179px;
+    margin-left: 120px;
 }
 
 .button {
@@ -269,22 +262,29 @@ h2 {
     background-color: #ee3643;
 }
 
-/*СЕТКА ГЛАВНОЙ СТРАНИЦЫ*/
-
-.main-content {
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-                                /*ПОДВАЛ*/
+                                /*ПОДВАЛ*/                               
  /*TOP-ROW*/                                           
 .top-row {
+    padding: 30px;
+
     font-size: 18px;
     line-height: 24px;
 
     color: #f3f7f9;
 
     background-color: #32425c;
+}
+
+.top-row-wrapper {
+    display: flex;
+}
+
+.logo-footer {
+    width: 220px;
+    height: 68px;
+
+    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+    background-color: #ee3643;
 }
 
 .footer-nav a{
@@ -294,7 +294,15 @@ h2 {
 }
 
 .footer-nav-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
     list-style: none;
+}
+
+.footer-nav-list li {
+    padding-top: 42px;
 }
 
 .footer-nav-list a:hover,
@@ -310,12 +318,22 @@ h2 {
 
 /*MIDDLE-ROW*/
 .middle-row {
+    padding-bottom: 50px;
+
     font-size: 18px;
     line-height: 24px;
 
     color: #f3f7f9;
 
     background-color: #32425c;
+}
+
+.middle-row-wrapper {
+    display: flex;
+}
+
+.footer-address {
+    margin: o;
 }
 
 .footer-menu a {
@@ -325,6 +343,10 @@ h2 {
 }
 
 .footer-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -336,6 +358,9 @@ h2 {
 
  /*BOTTOM-ROW*/
 .bottom-row {
+    padding-top: 40px;
+    padding-bottom: 35px; 
+
     font-size: 16px;
     line-height: 18px;
 
@@ -344,7 +369,19 @@ h2 {
     background-color: #293449;
 }
 
+.bottom-row-wrapper {
+    display: flex;
+}
+
+.bottom-row-wrapper p {
+    margin: 0;
+}
+
 .social-networks {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -375,8 +412,8 @@ h2 {
 .map-popap {
     display: none;
 }
-                                            /*ВНУТРЕННЯЯ СТРАНИЦА*/
-                        /*ШАПКА*/            
+                                /*ВНУТРЕННЯЯ СТРАНИЦА*/
+                /*ШАПКА*/            
 
 .full-basket {
     color: white;
@@ -385,6 +422,9 @@ h2 {
 }
 
 .user-zone {
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -403,7 +443,6 @@ h2 {
 
     color: #32425c;
 
-    background-color: #f4f7f9;
     text-decoration: underline;
 }
 
@@ -417,6 +456,23 @@ h2 {
 }
 
                         /*ОСНОВНОЕ СОДЕРЖАНИЕ ВНУТРЕННЕЙ СТРАНИЦЫ*/
+
+.main-content-inner {
+    padding-top: 20px;
+}
+
+.crumbs {
+    padding-bottom: 20px;
+}
+
+.breadcrumbs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
 .breadcrumbs-item a {
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: 400;
@@ -425,13 +481,15 @@ h2 {
     text-transform: uppercase;
 
     color: black;
-
-    background-color: white;
 }
 
 .main-title {
+    margin: 0;
+
     font-size: 30px;
+    font-weight: 400;
     line-height: 30px;
+    text-transform: uppercase;
     text-align: left;
 
     color: #32425c;
@@ -444,6 +502,9 @@ fieldset {
 }
 
 fieldset ul {
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -456,8 +517,6 @@ legend {
     text-align: left;
 
     color: black;
-
-    background-color: white;
 }
 
 fieldset li {
@@ -468,11 +527,11 @@ fieldset li {
     text-align: left;
 
     color: black;
-
-    background-color: white;
 }
 
 .filter button {
+    padding: 0;
+
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -484,7 +543,29 @@ fieldset li {
     border: 1px solid #e5e5e5;
 }
 
+.filters-and-catalog {
+    display: flex;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.catalog-item p,
+.catalog-item h3 {
+    margin: 0;
+}
+
 .catalog-item {
+    width: 220px;
+    height: 318px;
+    margin-right: 20px;
+
     border: 1px solid #e5e5e5;
 }
 
@@ -493,10 +574,13 @@ fieldset li {
     font-weight: bold;
     font-size: 18px;
     line-height: 20px;
+    text-align: center;
 
     color: black;
+}
 
-    background-color: white;
+.catalog-item-price {
+    text-align: center;
 }
 
 .catalog-item-old-price {
@@ -506,8 +590,6 @@ fieldset li {
     line-height: 18px;
 
     color: #999999;
-
-    background-color: white;
 }
 
 .catalog-item-new-price {
