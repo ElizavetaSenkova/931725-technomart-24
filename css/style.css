@@ -27,6 +27,23 @@ body {
 a {
     text-decoration: none;
 }
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
                                 /*ШАПКА*/
 .main-header {
     padding-bottom: 60px;
@@ -43,9 +60,16 @@ a {
 
 .top-header-wrapper {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.top-header-wrapper a {
+    vertical-align: middle;
 }
 
 .logo {
+    position: relative;
+
     width: 220px;
     height: 47px;
 
@@ -61,7 +85,25 @@ a {
     background-color: #ba2732;
 }
 
+.logo-technomart {
+    content: "";
+
+    position: absolute;
+    top: 14px;
+    left: 55px;
+
+    width: 110px;
+    height: 18px;
+
+    background-image: url("../img/logo-technomart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
+
 input[type="search"] {
+    /*padding: 12px 180px 12px 49px;*/
+
     background-color: #293449;
     border: none;
 }
@@ -80,6 +122,62 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 
 .search-form button {
     padding: 0;
+}
+
+.bookmarks {
+    position: relative;
+
+    padding: 12px 28px 12px 44px;
+}
+
+.bookmarks::before {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 17px;
+
+    width: 14px;
+    height: 16px;
+
+    background-image: url("../img/icon-bookmark.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
+}
+
+.basket {
+    position: relative;
+
+    padding: 12px 31px 12px 50px;
+}
+
+.basket::before {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 18px;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
+}
+/*ПРИ НАВЕДЕНИИ БЕЛЫЙ ЦВЕТ*/
+.bookmarks:hover::before,
+.basket:hover::before {
+    fill: white;
+}
+
+.bookmarks:active::before,
+.basket:active::before {
+    opacity: 0.5;
 }
 
 .bookmarks:hover,
@@ -101,8 +199,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .order-registration {
-    width: 150px;
-    height: 42px;
+    padding: 12px 22px 12px 20px;
 
     color: white;
 
@@ -120,6 +217,8 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 
 .middle-header h1 {
     margin: 0;
+    padding-left: 53px;
+    padding-right: 71px;
 
     font-style: italic;
     font-size: 16px;
@@ -130,6 +229,8 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .phone-number {
+    padding: 12px 52px 12px 74px;
+
     font-size: 21px;
     line-height: 21px;
 
@@ -140,6 +241,9 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 
 .address {
     margin: 0;
+    padding-top: 20px;
+    padding-left: 10px;
+
 
     font-size: 14px;
     line-height: 24px;
@@ -187,10 +291,16 @@ a.reg-link {
 
 .main-nav-list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 
     list-style: none;
+}
+
+.main-nav a {
+    display: block;
+    padding: 22px 31px;
 }
 
 .main-nav a:hover {
@@ -416,9 +526,30 @@ a.reg-link {
                 /*ШАПКА*/            
 
 .full-basket {
+    position: relative;
+
+    padding: 12px 31px 12px 50px;
+
     color: white;
 
     background-color: #ee3643;
+}
+
+.full-basket::before {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 18px;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
 }
 
 .user-zone {
@@ -563,10 +694,14 @@ fieldset li {
 
 .catalog-item {
     width: 220px;
-    height: 318px;
     margin-right: 20px;
+    margin-bottom: 20px;
 
     border: 1px solid #e5e5e5;
+}
+
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .catalog-item-title {
