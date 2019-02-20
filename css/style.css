@@ -102,7 +102,10 @@ a {
 }
 
 input[type="search"] {
-    /*padding: 12px 180px 12px 49px;*/
+    display: block;
+    width: 270px;
+    height: 100%;
+    padding: 12px 0 12px 49px;
 
     background-color: #293449;
     border: none;
@@ -127,7 +130,8 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 .bookmarks {
     position: relative;
 
-    padding: 12px 28px 12px 44px;
+    padding: 12px 0px 12px 44px;
+    width: 150px;
 }
 
 .bookmarks::before {
@@ -150,7 +154,8 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 .basket {
     position: relative;
 
-    padding: 12px 31px 12px 50px;
+    padding: 12px 0px 12px 50px;
+    width: 150px;
 }
 
 .basket::before {
@@ -199,7 +204,8 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .order-registration {
-    padding: 12px 22px 12px 20px;
+    padding: 12px 0px 12px 20px;
+    width: 150px;
 
     color: white;
 
@@ -207,12 +213,12 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .middle-header {
-    padding-top: 46px;
     padding-bottom: 40px;
 }
 
 .middle-header-wrapper {
     display: flex;
+    padding-top: 47px;
 }
 
 .middle-header h1 {
@@ -229,7 +235,12 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .phone-number {
-    padding: 12px 52px 12px 74px;
+    display: block;
+    width: 270px;
+
+    position: relative;
+
+    padding: 12px 0px 12px 74px;
 
     font-size: 21px;
     line-height: 21px;
@@ -239,9 +250,24 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     color: #ee3643;
 }
 
+.phone-number::before {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    width: 19px;
+    height: 19px;
+
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 .address {
     margin: 0;
-    padding-top: 20px;
+    padding-top: 5px;
     padding-left: 10px;
 
 
@@ -252,20 +278,46 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .enter-registration-list {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    align-items: flex-start;
 
-    list-style: none;
+    margin-left: 69px;
 }
 
-a.login-link,
-a.reg-link {
+.login-link,
+.reg-link {
     font-size: 21px;
     line-height: 21px;
 
     color: black;
 
     background-color: white;
+}
+
+.login-link {
+    position: relative;
+
+    padding: 14px 27px 14px 48px;
+}
+
+.login-link::before {
+    content: "";
+
+    position: absolute;
+    top: 16px;
+    left: 14px;
+
+    width: 20px;
+    height: 17px;
+
+    background-image: url("../img/icon-login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.reg-link {
+    margin-left: 10px;
+    padding: 14px 25px;
 }
 
 .login-link:hover,
@@ -528,7 +580,8 @@ a.reg-link {
 .full-basket {
     position: relative;
 
-    padding: 12px 31px 12px 50px;
+    padding: 12px 0px 12px 50px;
+    width: 150px;
 
     color: white;
 
@@ -553,13 +606,17 @@ a.reg-link {
 }
 
 .user-zone {
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
+    margin-left: 51px;
 }
 
-.current-account a {
+.current-account {
+    display: block;
+    padding: 14px 0px 14px 47px;
+    width: 299px;
+    margin-bottom: 10px;
+
+    position: relative;
+
     font-size: 21px;
     line-height: 21px;
 
@@ -568,7 +625,59 @@ a.reg-link {
     background-color: white;
 }
 
-.orders-account-item a {
+.current-account::before {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    left: 13px;
+
+    width: 20px;
+    height: 18px;
+
+    background-image: url("../img/icon-user.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.current-account::after {
+    content: "";
+
+    position: absolute;
+    top: 16px;
+    left: 269px;
+
+    width: 20px;
+    height: 17px;
+
+    background-image: url("../img/icon-logout.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.my-orders-zone {
+    position: relative;
+
+    padding-left: 17px;
+    padding-right: 34px;
+}
+
+.my-orders-zone::after {
+    content: "";
+
+    position: absolute;
+    top: 7px;
+    left: 108px;
+
+    width: 4px;
+    height: 5px;
+
+    background-color: #32425c;
+    border-radius: 50%;
+}
+
+.my-orders-zone,
+.account-zone {
     font-size: 16px;
     line-height: 18px;
 
@@ -577,11 +686,13 @@ a.reg-link {
     text-decoration: underline;
 }
 
-.orders-account-item a:hover {
+.my-orders-zone:hover,
+.account-zone:hover {
     color: #ee3643;
 }
 
-.orders-account-item a:active,
+.my-orders-zone:active,
+.account-zone:active,
 .current-account a:active {
     color: rgba(0, 0, 0, 0.3);
 }
