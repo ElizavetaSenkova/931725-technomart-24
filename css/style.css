@@ -368,6 +368,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
                         /*ОСНОВНОЕ СОДЕРЖАНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
 .company-and-contacts {
     display: flex;
+
     padding-top: 82px;
     padding-bottom: 86px; 
 
@@ -375,12 +376,13 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .company-technomart {
-    width: 519px;
+    width: 540px;
 }
 
 .company-technomart h2,
 .contacts h2 {
     margin: 0;
+    margin-bottom: 35px;
 
     font-size: 30px;
     line-height: 30px;
@@ -397,38 +399,72 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     line-height: 24px;
 }
 
+.man-shop {
+    padding-bottom: 30px;
+}
+
 .company-technomart-list {
     margin: 0;
     padding: 0;
+    padding-top: 18px;
+    padding-bottom: 6px;
 
     list-style: none;
 }
 
-.company-technomart-list li {
+.company-technomart-item {
+    padding-left: 36px;
+    padding-bottom: 22px;
+
     font-size: 18px;
     line-height: 20px;
 }
 
 .contacts {
-    width: 179px;
-    margin-left: 120px;
+    width: 300px;
+    margin-left: 100px;
+    padding-bottom: 0;
+}
+
+.contacts p {
+    padding-bottom: 30px;
+}
+
+.contacts img {
+    width: 300px;
+    height: 158px;
 }
 
 .button {
+    display: inline-block;
+    padding: 10px 37px;
+
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
 
     color: white;
 
     background-color: #ee3643;
 }
 
+.button-contacts {
+    width: 100%;
+    margin-top: 37px;
+}
+
+.button.disabled,
+.button:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background-color: #000000;
+
+}
                                 /*ПОДВАЛ*/                               
  /*TOP-ROW*/                                           
 .top-row {
-    padding: 30px;
-
     font-size: 18px;
     line-height: 24px;
 
@@ -442,14 +478,31 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .logo-footer {
+    position: relative;
+
     width: 220px;
-    height: 68px;
+    height: 67px;
 
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
     background-color: #ee3643;
 }
 
-.footer-nav a{
+.logo-techn-footer {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: 40px;
+
+    width: 142px;
+    height: 24px;
+
+    background-image: url("../img/logo-technomart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.footer-nav-list a{
     color: #f3f7f9;;
 
     background-color: #32425c;
@@ -459,12 +512,10 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     display: flex;
     margin: 0;
     padding: 0;
+    margin-top: 39px;
+    padding-left: 170px;
 
     list-style: none;
-}
-
-.footer-nav-list li {
-    padding-top: 42px;
 }
 
 .footer-nav-list a:hover,
@@ -476,6 +527,11 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     color: rgba(241, 245, 247, 0.5);
 
     text-decoration: none;
+}
+
+.footer-nav-list a {
+    display: inline-block;
+    padding-right: 60px;
 }
 
 /*MIDDLE-ROW*/
@@ -539,12 +595,35 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     margin: 0;
 }
 
+.copyright {
+    padding-right: 160px;
+}
+
 .social-networks {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
+    width: 132px;
 
     list-style: none;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    background-color: #212a3a;
+}
+
+.social-button:hover,
+.social-button:active {
+    background-color: #ee3643;
 }
 
 .email,
@@ -653,6 +732,10 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-image: url("../img/icon-logout.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+.current-account:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .my-orders-zone {
