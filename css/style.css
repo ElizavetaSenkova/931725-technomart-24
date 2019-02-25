@@ -1074,6 +1074,14 @@ input[type="radio"] {
     margin-right: 0;
 }
 
+.catalog-item:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.catalog-item:hover .hidden {
+    display: block;
+}
+
 .catalog-item .flag {
     position: absolute;
     top: -1px;
@@ -1094,18 +1102,55 @@ input[type="radio"] {
 }
 
 .hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
     display: none;
+    width: 220px;
+    height: 164px;
+    padding: 44px 43px 37px 43px;
+    
+    background-color: white;
+    z-index: 10;
+}
+
+.buy-hidden,
+.bookmarks-hidden {
+    display: block;
+    width: 134px;
 }
 
 .buy-hidden {
+    position: relative;
+
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+
+    padding: 12px 45px 12px 49px;
+    margin-bottom: 8px;
 
     color: white;
 
     box-shadow: inset 0px -3px 0 0 #367315;
     background-color: #63a63e;
+}
+
+.buy-hidden::before {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    left: 14px;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
 }
 
 .buy-hidden:hover {
@@ -1121,6 +1166,8 @@ input[type="radio"] {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+
+    padding: 10px 25px 10px 34px;
 
     color: #32425c;
 
@@ -1149,7 +1196,6 @@ input[type="radio"] {
 
 .catalog-item-title {
     padding-top: 11px;
-    padding-bottom: 17px;
 
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
@@ -1160,10 +1206,14 @@ input[type="radio"] {
 }
 
 .catalog-item-price {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .catalog-item-old-price {
+    padding-top: 15px;
+    padding-bottom: 12px;
+
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
     font-size: 17px;
@@ -1172,17 +1222,43 @@ input[type="radio"] {
     color: #999999;
 }
 
-.catalog-item-new-price {
+.catalog-item-new-price,
+.new-price {
+    position: relative;
+
+    width: 141px;
+    padding: 12px 36px;
+    margin-left: 43px;
+    margin-bottom: 21px;
+
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
     font-size: 17px;
     line-height: 18px;
 
     color: white;
+
+    background-color: #ee3643;
+    border-radius: 3px;
 }
 
-.catalog-item:hover {
-    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+.new-price {
+    margin-top: 40px;
+}
+
+.catalog-item-new-price::after,
+.new-price::after {
+    content: "";
+  
+    position: absolute;
+    top: 0;
+    right: -20px;
+  
+    width: 41px;
+    height: 42px;
+  
+    border: 20px solid white;
+    border-left-color: #ee3643;
 }
 
                        /*ПОПАПЫ*/
