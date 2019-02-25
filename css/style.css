@@ -102,24 +102,9 @@ a {
 }
 
 .search-form {
+    display: flex;
+
     position: relative;
-}
-
-.search-form::before {
-    content: "";
-
-    position: absolute;
-    top: 14px;
-    left: 17px;
-
-    width: 17px;
-    height: 17px;
-
-    background-image: url("../img/icon-search.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-
-    opacity: 0.3;
 }
 
 input[type="search"] {
@@ -145,6 +130,14 @@ input[type="search"]::-moz-placeholder          {color: white;}/* Firefox 19+ */
 input[type="search"]:-ms-input-placeholder      {color: white;}
 
 .search-form button {
+    position: absolute;
+    top: 15px;
+    left: 17px;
+
+    background-color: #293449;
+    border: none;
+    opacity: 0.3;
+
     padding: 0;
 }
 
