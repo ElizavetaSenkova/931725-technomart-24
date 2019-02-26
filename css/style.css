@@ -103,26 +103,43 @@ a {
 
 .search-form {
     display: flex;
+    flex-direction: row-reverse;
+    width: 270px;
+}
 
-    position: relative;
+.search-form:hover {
+    background-color: #212a3a;
 }
 
 input[type="search"] {
     display: block;
-    width: 270px;
+    width: 100%;
     height: 100%;
-    padding: 12px 0 12px 49px;
 
-    background-color: #293449;
     border: none;
+    background-color: #293449;
 }
 
 input[type="search"]:hover {
     background-color: #212a3a;
 }
 
+input[type="search"]:hover + button svg {
+    fill: white;
+    opacity: 1;
+}
+
 input[type="search"]:focus {
     background-color: white;
+}
+
+input[type="search"]:focus + button {
+    background-color: white;
+}
+
+input[type="search"]:focus + button svg{
+    fill: #ee3643;
+    opacity: 1;
 }
 
 input[type="search"]::-webkit-input-placeholder {color: white;}
@@ -130,15 +147,18 @@ input[type="search"]::-moz-placeholder          {color: white;}/* Firefox 19+ */
 input[type="search"]:-ms-input-placeholder      {color: white;}
 
 .search-form button {
-    position: absolute;
-    top: 15px;
-    left: 17px;
-
-    background-color: #293449;
-    border: none;
-    opacity: 0.3;
-
     padding: 0;
+    padding-left: 17px;
+    padding-right: 15px;
+    padding-top: 2px;
+
+    background-color: transparent;
+    border: none;
+}
+
+.search-button svg {
+    fill: white;
+    opacity: 0.3;
 }
 
 .bookmarks {
@@ -187,11 +207,6 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-position: 0 0;
 
     opacity: 0.3;
-}
-/*ПРИ НАВЕДЕНИИ БЕЛЫЙ ЦВЕТ*/
-.bookmarks:hover::before,
-.basket:hover::before {
-    fill: white;
 }
 
 .bookmarks:active::before,
@@ -380,6 +395,107 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
                         /*ОСНОВНОЕ СОДЕРЖАНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
+
+.slides {
+    padding-top: 59px;
+    padding-bottom: 53px;
+
+    background-color: gray;
+}
+
+.slides-top {
+    display: flex;
+}
+
+.slides ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.slides p {
+    margin: 0;
+}
+
+.slides-top li,
+.slides-bottom li {
+    width: 300px;
+    height: 123px;
+}
+
+.slides-top li {
+    margin-right: 20px;
+}
+
+.slides-top li:last-child {
+    margin-right: 0;
+}
+
+.slides-top li:nth-child(1) {
+    background-color: #ffbf47;
+}
+
+.slides-top li:nth-child(2) {
+    background-color: #3bbce3;;
+}
+
+.slides-top li:nth-child(3) {
+    background-color: #dc91d8;;
+}
+
+.slides-top p {
+    padding-top: 23px;
+    padding-bottom: 12px;
+    padding-left: 23px;
+}
+
+.slides-top a {
+    display: block;
+    width: 135px;
+    height: 38px;
+}
+
+.slides-top a:nth-child(1) {
+    background-color: #e5ac40;
+}
+
+.slides-top a:nth-child(2) {
+    background-color: #35a9cc;
+}
+
+.slides-top a:nth-child(3) {
+    background-color: #c682c2;
+}
+
+.slides-top p,
+.slides-bottom p {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.slides-top a,
+.slides-bottom a {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    color: inherit;
+}
+
+.drills-title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.drills-fun {
+    font-size: 18px;
+    line-height: 24px;
+}
+
 .company-and-contacts {
     display: flex;
 
@@ -1083,8 +1199,7 @@ input[type="radio"] {
     width: 60px;
     height: 60px;
     
-    text-indent: -1000px;
-    overflow: hidden;
+    font-size: 0;
     z-index: 20;
 }
 
