@@ -539,14 +539,12 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     padding-top: 20px;
 }
 
-.drills {
+.sliders {
     position: relative;
 
     width: 620px;
     height: 266px;
     margin-right: 20px;
-
-    background-image: url("../img/layer-99.jpg")
 }
 
 .drills-title {
@@ -567,14 +565,14 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     line-height: 24px;
 }
 
-.drills a {
+.sliders a {
     margin-top: 120px;
     margin-left: 25px;
     padding-right: 48px;
     padding-left: 48px;
 }
 
-.drills::before {
+.sliders::before {
     content: "";
 
     position: absolute;
@@ -589,7 +587,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-position: 0 0;
 }
 
-.drills::after {
+.sliders::after {
     content: "";
 
     position: absolute;
@@ -600,6 +598,88 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     height: 40px;
 
     background-image: url("../img/icon-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 215px;
+    left: 310px;
+    z-index: 100;
+    
+    width: 46px;
+    height: 20px;
+  
+    text-align: center;
+    font-size: 0;
+    transform: translateX(-50%);
+}
+
+.slider-controls i {
+    position: relative;
+    
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-controls i::after {
+    content: "";
+    
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    
+    width: 10px;
+    height: 10px;
+    
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.slider-controls .active::before {
+    content: "";
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    
+    width: 6px;
+    height: 6px;
+    margin: -3px;
+    
+    background-color: #ee3643;
+    border-radius: 50%;
+}
+
+.sliders-list {
+    margin: 0;
+    padding: 0;
+  
+    list-style: none;
+}
+
+.slider-item {
+    display: none;
+    padding-bottom: 17px;
+}
+  
+.slider-item:nth-child(1) {
+    display: block;
+
+    background-image: url("../img/drills.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.slider-item:nth-child(2) {
+    background-image: url("../img/perforators.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
