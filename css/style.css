@@ -642,7 +642,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     border-radius: 50%;
 }
 
-.slider-controls .active::before {
+.slider-controls .active-slider-control::before {
     content: "";
     
     position: absolute;
@@ -797,6 +797,163 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     margin-right: 0;
 }
 
+.blue {
+    color: black;
+
+    background-color: #f4f7f9;
+}
+
+.services {
+    padding-top: 68px;
+    padding-bottom: 70px;
+}
+
+.general > div {
+    display: flex;
+    padding-bottom: 102px;
+}
+
+.general ul {
+    position: relative;
+
+    margin: 0;
+    margin-right: 80px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.general h3 {
+    margin: 0;
+    padding-bottom: 25px;
+
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 36px;
+    text-transform: uppercase;
+
+    color: #32425c;
+}
+
+.delivery-general {
+    position: relative;
+}
+
+.delivery-general::before {
+    content: "";
+
+    position: absolute;
+    top: 23px;
+    left: 471px;
+
+    width: 468px;
+    height: 261px;
+
+    background-image: url("../img/delivery.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.guarantee-general {
+    position: relative;
+}
+
+.guarantee-general::before {
+    content: "";
+
+    position: absolute;
+    left: 559px;
+
+    width: 389px;
+    height: 283px;
+
+    background-image: url("../img/guarantee.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.credit-general {
+    position: relative;
+}
+
+.credit-general::before {
+    content: "";
+
+    position: absolute;
+    left: 485px;
+
+    width: 465px;
+    height: 285px;
+
+    background-image: url("../img/credit.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.delivery-navigation::before,
+.guarantee-navigation::before,
+.credit-navigation::before {
+    content: "";
+
+    position: absolute;
+    top: -46px;
+    left: 232px;
+    
+    width: 10px;
+    height: 279px;
+
+    background-image: url("../img/shadow.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.delivery-navigation li,
+.guarantee-navigation li,
+.credit-navigation li {
+    padding: 15px 140px 15px 22px;
+
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 30px;
+
+    color: white;
+
+    background-color: #32425c;
+    border: 1px solid #2b364a;
+    box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+}
+
+.delivery-navigation .active-general,
+.guarantee-navigation .active-general,
+.credit-navigation .active-general {
+    color: #32425c;
+
+    background-color: white;
+    border: none;
+    box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
+}
+
+.delivery-description {
+    width: 275px;
+}
+
+.guarantee-description {
+    width: 379px;
+}
+
+.credit-description {
+    width: 279px;
+}
+
+.credit-general p {
+    padding-bottom: 23px;
+}
+
+.credit-general a {
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
 .company-and-contacts {
     display: flex;
 
@@ -811,9 +968,10 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .company-technomart h3,
-.contacts h3 {
+.contacts h3,
+.services h3 {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     font-size: 30px;
     line-height: 30px;
@@ -822,7 +980,9 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }                         
 
 .company-technomart p,
-.contacts p {
+.contacts p,
+.services p,
+.general p {
     margin: 0;
 
     font-family: 'PT Sans', Arial, sans-serif;
