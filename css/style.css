@@ -572,6 +572,14 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     padding-left: 48px;
 }
 
+.sliders a:hover {
+    background-color: #ca2c37;
+}
+
+.sliders a:active {
+    background-color: #ba2732;;
+}
+
 .sliders::before {
     content: "";
 
@@ -778,23 +786,36 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+
+    list-style: none;
 }
 
 .manufacturers li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.manufacturers li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.manufacturers a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 220px;
     min-height: 145px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-
+    
     border: 1px solid #eaeaea;
-
 }
 
-.manufacturers li:nth-child(4n) {
-    margin-right: 0;
+.manufacturers a:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.manufacturers a:active {
+    box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+    opacity: 0.3;
 }
 
 .blue {
@@ -890,6 +911,10 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-repeat: no-repeat;
 }
 
+.credit-general p {
+    padding-bottom: 23px;
+}
+
 .delivery-navigation::before,
 .guarantee-navigation::before,
 .credit-navigation::before {
@@ -907,9 +932,10 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-repeat: no-repeat;
 }
 
-.delivery-navigation li,
-.guarantee-navigation li,
-.credit-navigation li {
+.delivery-navigation a,
+.guarantee-navigation a,
+.credit-navigation a {
+    display: block;
     padding: 15px 140px 15px 22px;
 
     font-size: 21px;
@@ -921,6 +947,12 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-color: #32425c;
     border: 1px solid #2b364a;
     box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+}
+
+.delivery-navigation a:hover:not(.active-general),
+.guarantee-navigation a:hover:not(.active-general),
+.credit-navigation a:hover:not(.active-general) {
+    background-color: #293449;
 }
 
 .delivery-navigation .active-general,
@@ -945,11 +977,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     width: 279px;
 }
 
-.credit-general p {
-    padding-bottom: 23px;
-}
-
-.credit-general a {
+.credit-description .button-credit {
     padding-right: 45px;
     padding-left: 45px;
 }
@@ -1004,11 +1032,26 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .company-technomart-item {
+    position: relative;
+
     padding-left: 36px;
     padding-bottom: 22px;
 
     font-size: 18px;
     line-height: 20px;
+}
+
+.company-technomart-item::before {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: 0px;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: #ee3643;
 }
 
 .contacts {
@@ -1453,6 +1496,108 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     color: #32425c;
 
     background-color: #f2f6f8;
+}
+
+.filter-and-sort {
+    display: flex;
+    padding-bottom: 20px;
+
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    color: black;
+}
+
+.filter-and-sort p {
+    margin: 0;
+}
+
+.filter-top,
+.sort {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    background-color: #f7f3ec;
+}
+
+.filter-top {
+    margin-right: 20px;
+    padding-left: 18px;
+    padding-right: 149px; 
+}
+
+.sort p {
+    padding-left: 18px;
+    padding-right: 139px;
+}
+
+.sort {
+    display: flex;
+    width: 100%;
+}
+
+.sort-list {
+    position: relative;
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.sort-list::before {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+    left: 400px;
+
+    width: 11px;
+    height: 10px;
+
+    background-image: url("../img/icon-up-dir.svg");
+}
+
+.sort-list::after {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+    left: 432px;
+
+    width: 11px;
+    height: 10px;
+
+    background-image: url("../img/icon-down-dir.svg");
+}
+
+.sort-list li:nth-child(1) {
+    padding-right: 71px;
+}
+
+.sort-list li:nth-child(2) {
+    padding-right: 65px;
+}
+
+.sort-list a {
+    color: rgba(0, 0, 0, 0.3);
+
+    border-bottom: 1px dotted #ee3643;
+}
+
+.sort-list a:hover {
+    color: black;
+
+    border-bottom: 1px solid #ee3643;
+}
+
+.sort-list .active-sort {
+    color: #ee3643;
+
+    border-bottom: none;
 }
 
 .filters-and-catalog {
