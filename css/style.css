@@ -1010,7 +1010,8 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 .company-technomart p,
 .contacts p,
 .services p,
-.general p {
+.general p,
+.about-perforators p {
     margin: 0;
 
     font-family: 'PT Sans', Arial, sans-serif;
@@ -1299,13 +1300,9 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
                         /*ПОПАПЫ*/
-.write-letter {
-    display: none;
-}
 
-.map-popap {
-    display: none;
-}
+
+                        
                                 /*ВНУТРЕННЯЯ СТРАНИЦА*/
                 /*ШАПКА*/            
 
@@ -1841,6 +1838,10 @@ input[type="radio"] {
     border: 1px solid #e5e5e5;
 }
 
+.catalog {
+    padding-bottom: 32px;
+}
+
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
@@ -2057,7 +2058,62 @@ input[type="radio"] {
     border-left-color: #ee3643;
 }
 
+.pagination {
+    padding-bottom: 60px;
+    padding-left: 240px;
+}
+
+.pagination a {
+    display: inline-block;
+    min-width: 38px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+
+    color: black;
+
+    border: 1px solid #e5e5e5;
+}
+
+.pagination a:hover:not(.current-pagination) {
+    border: solid 1px #bdc6ca;
+}
+
+.pagination a:active:not(.current-pagination) {
+    border: solid 1px #ee3643;
+}
+
+.pagination .next {
+    width: 140px;
+
+    text-transform: uppercase;
+}
+
+.pagination .current-pagination {
+    color: white;
+
+    background-color: #ee3643;
+}
+
+.about-perforators h2 {
+    margin: 0;
+    padding-top: 67px;
+    padding-bottom: 30px;
+
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.about-perforators p {
+    padding-bottom: 67px;
+}
+
                        /*ПОПАПЫ*/
-.item-status {
-    display: none;
-}                   
+                
