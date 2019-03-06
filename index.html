@@ -376,24 +376,26 @@
   <section class="modal modal-letter">
   <h2 class="visually-hidden">Форма отправки письма на почту Техномарта</h2>
   <button class="close" type="button" aria-label="Закрыть форму отправки письма на почту Техномарта">X</button>
-  <form action="https://echo.htmlacademy.ru" method="post">
-    
-      <p>
+  <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
+
+      <p class="letter-form-item">
         <label for="name-field">Ваше имя:</label>
         <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
       </p>
 
-      <p>
+      <p class="letter-form-item">
         <label for="email-field">Ваш e-mail:</label>
         <input type="email" name="email" id="email-field" placeholder="email@example.com">
       </p>
     
-      <p>
+      <p class="letter-form-item">
         <label for="message-field">Текст письма:</label>
         <textarea name="message" rows="6" id="message-field" placeholder="В свободной форме"></textarea>
       </p>
 
+    <div class="button-letter">
      <button type="submit" class="button">Отправить</button>
+    </div>
   </form>
   
   </section>
