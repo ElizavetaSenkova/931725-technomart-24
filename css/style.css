@@ -154,9 +154,17 @@ input[type="search"]:focus + button svg{
     opacity: 1;
 }
 
-input[type="search"]::-webkit-input-placeholder {color: white;}
-input[type="search"]::-moz-placeholder          {color: white;}/* Firefox 19+ */
-input[type="search"]:-ms-input-placeholder      {color: white;}
+input[type="search"]::-webkit-input-placeholder {
+    color: white;
+
+}
+input[type="search"]::-moz-placeholder {
+    color: white;
+}
+
+input[type="search"]:-ms-input-placeholder {
+    color: white;
+}
 
 .search-form button {
     padding: 0;
@@ -814,10 +822,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 .services {
     padding-top: 68px;
     padding-bottom: 70px;
-}
-
-/*!!!!!!*/  
-
+} 
 
 .general {
     position: relative;
@@ -874,6 +879,13 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
 }
 
+.general div {
+    position: relative;
+    
+    min-height: 284px;
+    margin-left: 320px;
+}
+
 .general h3 {
     margin: 0;
     padding-bottom: 25px;
@@ -886,32 +898,27 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     color: #32425c;
 }
 
-.delivery-description,
-.guarantee-description,
-.credit-description {
-    position: relative;
-    
-    margin-left: 320px;
-}
-
 .delivery-description {
+    display: block;
     width: 275px;
 }
 
 .guarantee-description {
+    display: none;
     width: 379px;
 }
 
 .credit-description {
+    display: none;
     width: 279px;
 }
 
-/*.delivery-description::after {
+.delivery-description::after {
     content: "";
 
     position: absolute;
-    top: 23px;
-    
+    top: 21px;
+    left: 151px;
 
     width: 468px;
     height: 261px;
@@ -921,11 +928,12 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-repeat: no-repeat;
 }
 
-.guarantee-general::before {
+.guarantee-description::before {
     content: "";
 
     position: absolute;
-    left: 559px;
+    top: 1px;
+    left: 239px;
 
     width: 389px;
     height: 283px;
@@ -935,11 +943,12 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-repeat: no-repeat;
 }
 
-.credit-general::before {
+.credit-description::before {
     content: "";
 
     position: absolute;
-    left: 485px;
+    top: 3px;
+    left: 165px;
 
     width: 465px;
     height: 285px;
@@ -947,7 +956,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-image: url("../img/credit.png");
     background-position: 0 0;
     background-repeat: no-repeat;
-}*/
+}
 
 .credit-description p {
     padding-bottom: 23px;
@@ -957,14 +966,6 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     padding-right: 45px;
     padding-left: 45px;
 }
-
-
-
-
-
-
-
-/*!!!!!!*/
 
 .company-and-contacts {
     display: flex;
@@ -1300,7 +1301,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .modal {
-    /*position: fixed;*/
+    position: fixed;
 
     color: black;
 
@@ -1308,7 +1309,12 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .modal-letter {
-    position: relative;
+    display: none;
+
+    top: 38.7%;
+    left: 49.4%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
 
     width: 620px;
 
@@ -1318,7 +1324,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
-.modal-letter::before {
+.letter-form::before {
     content: "";
 
     position: absolute;
@@ -1331,7 +1337,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     background-color: #ee3643;
 }
 
-.modal-letter::after {
+.letter-form::after {
     content: "";
 
     position: absolute;
@@ -1398,30 +1404,35 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     color: #a9a9a9;
     font-size: 13px; 
     line-height: 18px;
+    font-family: 'PT Sans', Arial, sans-serif;
 }
 
 .letter-form input::-moz-placeholder {
     color: #a9a9a9;
     font-size: 13px; 
     line-height: 18px;
+    font-family: 'PT Sans', Arial, sans-serif;
 }
 
 .letter-form input:-ms-input-placeholder {
     color: #a9a9a9;
     font-size: 13px; 
     line-height: 18px;
+    font-family: 'PT Sans', Arial, sans-serif;
 }
 
 .letter-form textarea::-webkit-input-placeholder {
     color: #a9a9a9;
     font-size: 13px; 
     line-height: 18px;
+    font-family: 'PT Sans', Arial, sans-serif;
 }
 
 .letter-form textarea::-moz-placeholder {
     color: #a9a9a9;
     font-size: 13px; 
     line-height: 18px;
+    font-family: 'PT Sans', Arial, sans-serif;
 }
  
 .letter-form textarea:-ms-input-placeholder {
@@ -1429,6 +1440,7 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
     color: green;
     font-size: 13px; 
     line-height: 18px;
+    font-family: 'PT Sans', Arial, sans-serif;
 }
 /*placeholder*/
 
@@ -1442,7 +1454,12 @@ input[type="search"]:-ms-input-placeholder      {color: white;}
 }
 
 .modal-map {
-    position: relative;
+    display: none;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
 
     width: 940px;
     height: 446px;
@@ -2282,7 +2299,12 @@ input[type="radio"] {
 
                        /*ПОПАПЫ*/
 .modal-status {
-    position: relative;
+    display: none;
+
+    top: 50%;
+    left: 50.1%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
 
     width: 620px;
 
@@ -2351,6 +2373,10 @@ input[type="radio"] {
     z-index: 10;
 }
 
+.modal-status-buttons a {
+    padding: 12px 62px 12px 59px;
+}
+
 .modal-status-buttons button {
     padding: 0;
     padding: 12px 48px 10px 44px;
@@ -2363,4 +2389,5 @@ input[type="radio"] {
 
     background-color: white;
     border: none;
+    border-radius: 3px;
 }
