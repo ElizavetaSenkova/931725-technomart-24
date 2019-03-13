@@ -14,9 +14,7 @@
 
     <div class="top-header">
       <div class="top-header-wrapper container">
-        <div class="logo">
-          <a class="logo-technomart" href="index.html"></a>
-        </div>
+        <a class="logo-technomart" href="index.html"></a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <input type="search" name="search" placeholder="Поиск:" aria-label="Поиск по сайту">
           <button type="button" class="search-button">
@@ -38,7 +36,24 @@
           <p class="address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="user-zone">
-          <a class="current-account" href="#">Равшан Джамшутович</a>
+          <div class="current-account-link">
+            <a class="icon-user" href="#">
+              <?xml version="1.0" encoding="utf-8"?>
+              <!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+              <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	              width="20px" height="18px" viewBox="0 0 20 18" enable-background="new 0 0 20 18" xml:space="preserve">
+              <path fill="#c5c5c5" d="M17.881,14.166c-2.144-0.735-4.256-1.666-5.207-2.39c-0.657-0.501-0.77-1.618-0.517-2.415
+	              c1.118-0.903,1.864-2.477,1.864-4.278C14.021,2.276,12.221,0,10,0S5.979,2.276,5.979,5.083c0,1.801,0.746,3.374,1.863,4.277
+	              c0.253,0.798,0.141,1.915-0.517,2.416c-0.95,0.724-3.063,1.654-5.207,2.39S0,18,0,18h20C20,18,20.025,14.901,17.881,14.166z"/>
+              </svg>
+            </a>
+            <a class="current-account" href="#">Равшан Джамшутович</a>
+            <a class="icon-logout" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
+              <g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
+            </a>
+          </div>
           <a class="my-orders-zone" href="#">Мои заказы</a>
           <a class="account-zone" href="#">Личный кабинет</a>
         </div>
@@ -99,7 +114,7 @@
     <section class="filters-for-products">
     <h3 class="visually-hidden">Фильтры для товаров</h3>
     <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset>
+      <fieldset class="price-filter">
         <legend>Цена:</legend>
           <div class="range-controls">
             <div class="scale">
@@ -111,12 +126,12 @@
             <input type="text" name="max-price" value="3000">
           </div>
       </fieldset>
-      <fieldset>
+      <fieldset class="manufacturers-filter">
         <legend>Производители:</legend>
         <ul>
           <li>
             <input type="checkbox" name="BOSCH" id="filter-BOSCH" checked>
-            <label for="filter-BOSCH" class="checkbox-choose">BOSCH</label>
+            <label for="filter-BOSCH" class="filter-checkbox">BOSCH</label>
           </li>
           <li>
             <input type="checkbox" name="Интерскол" id="filter-interskol">
@@ -124,7 +139,7 @@
           </li>
           <li>
             <input type="checkbox" name="Makita" id="filter-Makita" checked>
-            <label for="filter-Makita" class="checkbox-choose">Makita</label>
+            <label for="filter-Makita" class="filter-checkbox">Makita</label>
           </li>
           <li>
             <input type="checkbox" name="Dewalt" id="filter-Dewalt">
@@ -136,12 +151,12 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset>
+      <fieldset class="power-filter">
         <legend>Питание:</legend>
         <ul>
           <li>
             <input type="radio" name="battery-power" id="filter-accumulator" value="accumulator" checked>
-            <label for="filter-accumulator" class="radio-choose">Аккумуляторные</label>
+            <label for="filter-accumulator" class="filter-radio">Аккумуляторные</label>
           </li>
           <li>
             <input type="radio" name="battery-power" id="filter-networking" value="networking">
@@ -196,8 +211,7 @@
           </li>
 
             <!--3 товар-->
-            <li class="catalog-item">
-              <div class="flag flag-new">Новинка</div>
+            <li class="catalog-item new">
               <div class="hidden">
                 <a class="buy-hidden" href="#">Купить</a>
                 <a class="bookmarks-hidden" href="#">В закладки</a>
@@ -235,8 +249,7 @@
            
 
             <!--5 товар--> 
-            <li class="catalog-item">
-              <div class="flag flag-new">Новинка</div>
+            <li class="catalog-item new">
               <div class="hidden">
               <a class="buy-hidden" href="#">Купить</a>
               <a class="bookmarks-hidden" href="#">В закладки</a>
@@ -274,8 +287,7 @@
             </li>
 
             <!--7 товар-->
-            <li class="catalog-item">
-              <div class="flag flag-new">Новинка</div>
+            <li class="catalog-item new">
               <div class="hidden">
                 <a class="buy-hidden" href="#">Купить</a>
                 <a class="bookmarks-hidden" href="#">В закладки</a>
@@ -364,7 +376,7 @@
 
     <div class="top-row">
       <div class="top-row-wrapper container">
-        <div class="logo-footer"><a class="logo-techn-footer" href="index.html"></a></div>
+        <a class="logo-techn-footer" href="index.html"></a>
         <ul class="footer-nav-list">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
