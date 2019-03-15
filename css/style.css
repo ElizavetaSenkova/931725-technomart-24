@@ -138,7 +138,7 @@ a {
     background-color: #212a3a;
 }
 
-input[type="search"] {
+.search-form input[type="search"] {
     display: block;
     width: 100%;
     height: 100%;
@@ -147,37 +147,37 @@ input[type="search"] {
     background-color: #293449;
 }
 
-input[type="search"]:hover {
+.search-form input[type="search"]:hover {
     background-color: #212a3a;
 }
 
-input[type="search"]:hover + button svg {
+.search-form input[type="search"]:hover + button svg {
     fill: white;
     opacity: 1;
 }
 
-input[type="search"]:focus {
+.search-form input[type="search"]:focus {
     background-color: white;
 }
 
-input[type="search"]:focus + button {
+.search-form input[type="search"]:focus + button {
     background-color: white;
 }
 
-input[type="search"]:focus + button svg{
+.search-form input[type="search"]:focus + button svg{
     fill: #ee3643;
     opacity: 1;
 }
 
-input[type="search"]::-webkit-input-placeholder {
+.search-form input[type="search"]::-webkit-input-placeholder {
     color: white;
 
 }
-input[type="search"]::-moz-placeholder {
+.search-form input[type="search"]::-moz-placeholder {
     color: white;
 }
 
-input[type="search"]:-ms-input-placeholder {
+.search-form input[type="search"]:-ms-input-placeholder {
     color: white;
 }
 
@@ -199,7 +199,7 @@ input[type="search"]:-ms-input-placeholder {
 .bookmarks {
     position: relative;
 
-    padding: 12px 0px 12px 48px;
+    padding: 12px 0px 12px 45px;
     width: 150px;
 }
 
@@ -208,7 +208,7 @@ input[type="search"]:-ms-input-placeholder {
 
     position: absolute;
     top: 12px;
-    left: 20px;
+    left: 18px;
 
     width: 14px;
     height: 16px;
@@ -223,7 +223,7 @@ input[type="search"]:-ms-input-placeholder {
 .basket {
     position: relative;
 
-    padding: 12px 0px 12px 54px;
+    padding: 12px 0px 12px 50px;
     width: 150px;
 }
 
@@ -232,7 +232,7 @@ input[type="search"]:-ms-input-placeholder {
 
     position: absolute;
     top: 12px;
-    left: 23px;
+    left: 19px;
 
     width: 15px;
     height: 15px;
@@ -308,7 +308,7 @@ input[type="search"]:-ms-input-placeholder {
 
     position: relative;
 
-    padding: 12px 0px 12px 79px;
+    padding: 12px 0px 12px 76px;
 
     font-size: 21px;
     line-height: 21px;
@@ -335,7 +335,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .address {
     margin: 0;
-    padding-top: 5px;
+    padding-top: 2px;
     padding-left: 16px;
 
 
@@ -353,7 +353,7 @@ input[type="search"]:-ms-input-placeholder {
         -ms-flex-align: start;
             align-items: flex-start;
 
-    margin-left: 68px;
+    margin-left: 74px;
 }
 
 .login-link,
@@ -408,6 +408,8 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .main-nav {
+    width: 940px;
+
     color: white;
 
     background-color: #32425c;
@@ -419,7 +421,9 @@ input[type="search"]:-ms-input-placeholder {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0;
     padding: 0;
 
@@ -428,7 +432,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .main-nav a {
     display: block;
-    padding: 22px 31px;
+    padding: 22px 30px;
 }
 
 .main-nav a:hover {
@@ -617,7 +621,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .drills-title {
-    padding-top: 27px;
+    padding-top: 24px;
     padding-left: 24px;
 
     font-size: 36px;
@@ -627,7 +631,6 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .drills-fun {
-    padding-top: 1px;
     padding-left: 24px;
 
     font-size: 18px;
@@ -637,7 +640,7 @@ input[type="search"]:-ms-input-placeholder {
 .sliders a {
     margin-top: 122px;
     margin-left: 25px;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
     padding-right: 48px;
     padding-left: 48px;
     
@@ -653,7 +656,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .sliders-control {
     position: absolute;
-    top: 221px;
+    top: 217px;
     left: 295px;
 }
 
@@ -790,15 +793,22 @@ input[type="search"]:-ms-input-placeholder {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 20px;
-    padding: 25px 24px 25px 30px;
 
     background-color: #f9f5f0;
+}
+
+.goods-and-button {
+    padding: 25px 24px 27px 30px;
+}
+
+.manufacturers-and-button {
+    padding: 25px 24px 27px 30px;
 }
 
 .goods-and-button h2,
 .manufacturers-and-button h2 {
     margin: 0;
-    margin-top: 6px;
+    padding-top: 3px;
 
     font-size: 30px;
     font-weight: normal;
@@ -808,11 +818,18 @@ input[type="search"]:-ms-input-placeholder {
     color: #32425c;
 }
 
-.goods-and-button a,
+.goods-and-button a {
+    margin-left: auto;
+
+    padding-right: 56px;
+    padding-left: 55px;
+}
+
 .manufacturers-and-button a {
     margin-left: auto;
 
-    min-width: 253px;
+    padding-right: 70px;
+    padding-left: 70px;
 }
 
 .catalog-list-main li:nth-child(3) {
@@ -842,34 +859,35 @@ input[type="search"]:-ms-input-placeholder {
 .manufacturers li {
     margin-right: 20px;
     margin-bottom: 20px;
+
+   display: -webkit-box;
+
+   display: -ms-flexbox;
+
+   display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   width: 220px;
+   min-height: 145px;
+
+   border: 1px solid #eaeaea;
+   cursor: pointer;
 }
 
 .manufacturers li:nth-child(4n) {
     margin-right: 0;
 }
 
-.manufacturers a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 220px;
-    min-height: 145px;
-    
-    border: 1px solid #eaeaea;
-}
-
-.manufacturers a:hover {
+.manufacturers li:hover {
     -webkit-box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
             box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.manufacturers a:active {
+.manufacturers li:active {
     -webkit-box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
             box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
     opacity: 0.3;
@@ -952,7 +970,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .general h3 {
     margin: 0;
-    padding-bottom: 25px;
+    padding-bottom: 22px;
 
     font-size: 36px;
     font-weight: normal;
@@ -1036,8 +1054,8 @@ input[type="search"]:-ms-input-placeholder {
     display: -ms-flexbox;
     display: flex;
 
-    padding-top: 82px;
-    padding-bottom: 86px; 
+    padding-top: 78px;
+    padding-bottom: 87px; 
 
     color: black;
 }
@@ -1050,7 +1068,7 @@ input[type="search"]:-ms-input-placeholder {
 .contacts h3,
 .services h3 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
 
     font-size: 30px;
     line-height: 30px;
@@ -1071,14 +1089,14 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .man-shop {
-    padding-bottom: 30px;
+    padding-bottom: 24px;
 }
 
 .company-technomart-list {
     margin: 0;
     padding: 0;
     padding-top: 18px;
-    padding-bottom: 6px;
+    padding-bottom: 14px;
 
     list-style: none;
 }
@@ -1123,7 +1141,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .button {
     display: inline-block;
-    padding: 10px 38px;
+    padding: 10px 40px;
 
     font-size: 14px;
     line-height: 18px;
@@ -1139,7 +1157,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .button-contacts {
     width: 100%;
-    margin-top: 37px;
+    margin-top: 39px;
 }
 
 .button.disabled,
@@ -1234,7 +1252,7 @@ input[type="search"]:-ms-input-placeholder {
 
 /*MIDDLE-ROW*/
 .middle-row {
-    padding-top: 30px;
+    padding-top: 27px;
     padding-bottom: 49px;
 
     font-size: 18px;
@@ -1253,6 +1271,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .footer-address {
     margin: 0;
+    padding-left: 5px;
 }
 
 .footer-menu a {
@@ -1273,7 +1292,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .footer-menu li {
-    margin-right: 60px;
+    margin-right: 55px;
 }
 
 .footer-menu li:last-child {
@@ -1288,8 +1307,8 @@ input[type="search"]:-ms-input-placeholder {
 
  /*BOTTOM-ROW*/
 .bottom-row {
-    padding-top: 36px;
-    padding-bottom: 36px; 
+    padding-top: 41px;
+    padding-bottom: 26px; 
 
     font-size: 16px;
     line-height: 18px;
@@ -1310,7 +1329,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .copyright {
-    padding-right: 160px;
+    padding-right: 171px;
 }
 
 .social-networks {
@@ -1624,7 +1643,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .current-account-link {
     display: block;
-    padding: 14px 0px 14px 47px;
+    padding: 14px 0px 14px 49px;
     width: 299px;
     margin-bottom: 9px;
 
@@ -1647,7 +1666,7 @@ input[type="search"]:-ms-input-placeholder {
 .icon-user {
     position: absolute;
     top: 15px;
-    left: 13px;
+    left: 17px;
     
     width: 20px;
     height: 18px;
@@ -1656,7 +1675,7 @@ input[type="search"]:-ms-input-placeholder {
 .icon-logout {
     position: absolute;
     top: 16px;
-    left: 269px;
+    left: 272px;
 
     width: 20px;
     height: 17px;
@@ -1665,8 +1684,8 @@ input[type="search"]:-ms-input-placeholder {
 .my-orders-zone {
     position: relative;
 
-    padding-left: 17px;
-    padding-right: 34px;
+    padding-left: 21px;
+    padding-right: 31px;
 }
 
 .my-orders-zone::after {
@@ -1674,7 +1693,7 @@ input[type="search"]:-ms-input-placeholder {
 
     position: absolute;
     top: 7px;
-    left: 108px;
+    left: 111px;
 
     width: 4px;
     height: 5px;
@@ -1707,11 +1726,11 @@ input[type="search"]:-ms-input-placeholder {
                         /*ОСНОВНОЕ СОДЕРЖАНИЕ ВНУТРЕННЕЙ СТРАНИЦЫ*/
 
 .main-content-inner {
-    padding-top: 23px;
+    padding-top: 21px;
 }
 
 .crumbs {
-    padding-bottom: 24px;
+    padding-bottom: 16px;
 }
 
 .breadcrumbs {
@@ -1727,14 +1746,14 @@ input[type="search"]:-ms-input-placeholder {
 .breadcrumbs li {
     position: relative;
 
-    margin-right: 43px;
+    margin-right: 38px;
 }
 
 .arrow::before {
     content: "";
 
     position: absolute;
-    top: 3px;
+    top: 0;
     left: -24px;
 
     width: 8px;
@@ -1791,10 +1810,11 @@ input[type="search"]:-ms-input-placeholder {
 
 .filter-top,
 .sort {
-    padding-top: 12px;
+    padding-top: 8px;
     padding-bottom: 12px;
 
     background-color: #f7f3ec;
+    border-radius: 3px;
 }
 
 .filter-top {
@@ -1804,7 +1824,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 .sort p {
-    padding-left: 18px;
+    padding-left: 21px;
     padding-right: 139px;
 }
 
@@ -1896,30 +1916,33 @@ input[type="search"]:-ms-input-placeholder {
     width: inherit;
 }
 
-.filter fieldset {
+.filter .price-filter {
     margin: 0;
-    margin-top: 20px;
     padding: 0;
-    padding-bottom: 21px;
+    padding-bottom: 25px;
 
     border: none;
     border-bottom: 1px solid #e5e5e5;
 }
 
-.filter fieldset:nth-child(1) {
-    margin-top: 0;
-    padding-bottom: 25px;
+.filter .manufacturers-filter {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 22px;
+
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.filter fieldset:nth-child(3) {
-    padding-bottom: 75px;
+.filter .power-filter {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 78px;
 
     border: none;
 }
 
 .filter legend {
-    padding-bottom: 14px;
-
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
     font-size: 17px;
@@ -1928,6 +1951,20 @@ input[type="search"]:-ms-input-placeholder {
     text-align: left;
 
     color: black;
+}
+
+.price-filter legend {
+    padding-bottom: 6px;
+}
+
+.manufacturers-filter legend {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.power-filter legend {
+    padding-top: 19px;
+    padding-bottom: 15px;
 }
 
 .filter ul {
@@ -1939,7 +1976,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .manufacturers-filter li,
 .power-filter li {
-    margin-bottom: 17px;
+    padding-bottom: 20px;
     padding-left: 35px;
 
     font-family: 'PT Sans', Arial, sans-serif;
@@ -1953,7 +1990,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .manufacturers-filter li:last-child,
 .power-filter li:last-child {
-    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .range-controls {
@@ -1961,6 +1998,7 @@ input[type="search"]:-ms-input-placeholder {
     padding: 39px 20px;
 
     background-color: #f7f3ec;
+    border-radius: 3px;
 }
 
 .range-controls .scale {
@@ -2031,6 +2069,7 @@ input[type="search"]:-ms-input-placeholder {
 
     background-color: #f7f3ec;
     border: none;
+    border-radius: 3px;
 }
 
 .price-controls input:nth-child(1) {
@@ -2139,7 +2178,8 @@ input[type="radio"]:checked + label::after {
 }
 
 .catalog {
-    padding-bottom: 32px;
+    padding-bottom: 30px;
+    width: 700px;
 }
 
 .catalog-list {
@@ -2164,7 +2204,7 @@ input[type="radio"]:checked + label::after {
 
     width: 220px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 
     text-align: center;
 
@@ -2208,7 +2248,7 @@ input[type="radio"]:checked + label::after {
     left: 0;
     
     display: none;
-    padding: 44px 41px 37px 41px;
+    padding: 40px 41px 37px 41px;
     
     background-color: white;
     z-index: 10;
@@ -2218,6 +2258,8 @@ input[type="radio"]:checked + label::after {
 .bookmarks-hidden {
     display: block;
     width: 134px;
+
+    border-radius: 3px;
 }
 
 .buy-hidden {
@@ -2227,7 +2269,7 @@ input[type="radio"]:checked + label::after {
     line-height: 18px;
     text-transform: uppercase;
 
-    padding: 12px 45px 12px 49px;
+    padding: 10px 45px 10px 49px;
     margin-bottom: 8px;
 
     color: white;
@@ -2293,7 +2335,7 @@ input[type="radio"]:checked + label::after {
 }
 
 .catalog-item-title {
-    padding-top: 11px;
+    padding-top: 6px;
 
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
@@ -2314,7 +2356,7 @@ input[type="radio"]:checked + label::after {
 }
 
 .catalog-item-old-price {
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 12px;
 
     font-family: 'PT Sans', Arial, sans-serif;
@@ -2330,7 +2372,7 @@ input[type="radio"]:checked + label::after {
     position: relative;
 
     width: 141px;
-    padding: 12px 36px;
+    padding: 11px 36px;
     margin-left: 43px;
     margin-bottom: 21px;
 
@@ -2358,7 +2400,7 @@ input[type="radio"]:checked + label::after {
     right: -20px;
   
     width: 41px;
-    height: 42px;
+    height: 34px;
   
     border: 20px solid white;
     border-left-color: #ee3643;
@@ -2372,6 +2414,7 @@ input[type="radio"]:checked + label::after {
 .pagination a {
     display: inline-block;
     min-width: 38px;
+    margin-right: 6px;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -2384,6 +2427,7 @@ input[type="radio"]:checked + label::after {
     color: black;
 
     border: 1px solid #e5e5e5;
+    border-radius: 3px;
 }
 
 .pagination a:hover:not(.current-pagination) {
@@ -2408,8 +2452,8 @@ input[type="radio"]:checked + label::after {
 
 .about-perforators h2 {
     margin: 0;
-    padding-top: 67px;
-    padding-bottom: 30px;
+    padding-top: 64px;
+    padding-bottom: 27px;
 
     font-size: 30px;
     font-weight: normal;
