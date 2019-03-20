@@ -68,6 +68,7 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    min-height: 42px;
 }
 
 .top-header-wrapper a {
@@ -80,7 +81,6 @@ a {
     position: relative;
 
     width: 220px;
-    height: 42px;
 
     background-color: #ee3643;
 }
@@ -111,8 +111,8 @@ a {
     height: 5px;
 
     background-color: #ee3643;
-    -webkit-box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
-            box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
+            box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
 .logo-technomart:hover {
@@ -199,7 +199,7 @@ a {
 .bookmarks {
     position: relative;
 
-    padding: 12px 0px 12px 45px;
+    padding: 12px 0 12px 45px;
     width: 150px;
 }
 
@@ -223,7 +223,7 @@ a {
 .basket {
     position: relative;
 
-    padding: 12px 0px 12px 50px;
+    padding: 12px 0 12px 50px;
     width: 150px;
 }
 
@@ -268,7 +268,7 @@ a {
 }
 
 .order-registration {
-    padding: 12px 0px 12px 20px;
+    padding: 12px 0 12px 20px;
     width: 150px;
 
     color: white;
@@ -308,7 +308,7 @@ a {
 
     position: relative;
 
-    padding: 12px 0px 12px 76px;
+    padding: 12px 0 12px 76px;
 
     font-size: 21px;
     line-height: 21px;
@@ -723,6 +723,8 @@ a {
 
 .slider-item {
     display: none;
+
+    background-color: #8d7c6f;
 }
   
 .slider-item:nth-child(1) {
@@ -883,13 +885,13 @@ a {
 }
 
 .manufacturers li:hover {
-    -webkit-box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
-            box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+    -webkit-box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+            box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .manufacturers li:active {
-    -webkit-box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
-            box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+    -webkit-box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+            box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
     opacity: 0.3;
 }
 
@@ -906,6 +908,8 @@ a {
 
 .general {
     position: relative;
+
+    padding-bottom: 128px;
 }
 
 .general-navigation {
@@ -944,8 +948,8 @@ a {
 
     background-color: #32425c;
     border: 1px solid #2b364a;
-    -webkit-box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
-            box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+    -webkit-box-shadow:  1px 0 0 #293449, inset 0 1px 0 0 #405069;
+            box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
 }
 
 .general-navigation a:hover:not(.active-general) {
@@ -957,14 +961,13 @@ a {
 
     background-color: white;
     border: none;
-    -webkit-box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
-            box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
+    -webkit-box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
+            box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
 }
 
 .general div {
     position: relative;
     
-    min-height: 284px;
     margin-left: 320px;
 }
 
@@ -1116,7 +1119,7 @@ a {
 
     position: absolute;
     top: 9px;
-    left: 0px;
+    left: 0;
 
     width: 25px;
     height: 2px;
@@ -1192,9 +1195,9 @@ a {
     width: 220px;
     height: 67px;
 
-    -webkit-box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
 
-            box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+            box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
     background-color: #ee3643;
 }
 
@@ -1400,6 +1403,7 @@ a {
     position: absolute;
     top: 16px;
     right: 9px;
+    z-index: 10;
 
     width: 21px;
     height: 21px;
@@ -1411,6 +1415,8 @@ a {
 }
 
 .modal {
+    display: none;
+
     position: fixed;
 
     color: black;
@@ -1418,9 +1424,9 @@ a {
     background-color: white;
 }
 
-.modal-letter {
-    display: none;
 
+
+.modal-letter {
     top: 38.7%;
     left: 49.4%;
     -webkit-transform: translate(-50%,-50%);
@@ -1432,9 +1438,13 @@ a {
     font-size: 18px;
     line-height: 18px;
 
-    -webkit-box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
 
-            box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+            box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal-letter-show {
+    display: block;
 }
 
 .letter-form::before {
@@ -1572,8 +1582,6 @@ a {
 }
 
 .modal-map {
-    display: none;
-
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
@@ -1588,6 +1596,10 @@ a {
             box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
 }
 
+.modal-map-show {
+    display: block;
+}
+
 .modal-map img {
     width: 940px;
     height: 446px;
@@ -1597,6 +1609,7 @@ a {
     position: absolute;
     top: 9px;
     right: 9px;
+    z-index: 20;
 
     width: 21px;
     height: 21px;
@@ -1606,13 +1619,23 @@ a {
     border: none;
     background-color: transparent;
 }
+
+.modal-map iframe {
+    position: absolute;
+    z-index: 10;
+
+    width: 940px;
+    height: 446px;
+
+    border: none;
+}
                                 /*ВНУТРЕННЯЯ СТРАНИЦА*/
                 /*ШАПКА*/            
 
 .full-basket {
     position: relative;
 
-    padding: 12px 0px 12px 50px;
+    padding: 12px 0 12px 50px;
     width: 150px;
 
     color: white;
@@ -1643,7 +1666,7 @@ a {
 
 .current-account-link {
     display: block;
-    padding: 14px 0px 14px 49px;
+    padding: 14px 0 14px 49px;
     width: 299px;
     margin-bottom: 9px;
 
@@ -2234,8 +2257,8 @@ input[type="radio"]:checked + label::after {
 }
 
 .catalog-item:hover {
-    -webkit-box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
-            box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+    -webkit-box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+            box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .catalog-item:hover .hidden {
@@ -2274,9 +2297,9 @@ input[type="radio"]:checked + label::after {
 
     color: white;
 
-    -webkit-box-shadow: inset 0px -3px 0 0 #367315;
+    -webkit-box-shadow: inset 0 -3px 0 0 #367315;
 
-            box-shadow: inset 0px -3px 0 0 #367315;
+            box-shadow: inset 0 -3px 0 0 #367315;
     background-color: #63a63e;
 }
 
@@ -2297,8 +2320,8 @@ input[type="radio"]:checked + label::after {
 }
 
 .buy-hidden:hover {
-    -webkit-box-shadow: inset 0px -3px 0 0 #367315;
-            box-shadow: inset 0px -3px 0 0 #367315;
+    -webkit-box-shadow: inset 0 -3px 0 0 #367315;
+            box-shadow: inset 0 -3px 0 0 #367315;
     background-color: #5fbb2d;
 }
 
@@ -2467,8 +2490,6 @@ input[type="radio"]:checked + label::after {
 
                        /*ПОПАПЫ*/
 .modal-status {
-    display: none;
-
     top: 50%;
     left: 50.1%;
     -webkit-transform: translate(-50%,-50%);
@@ -2477,9 +2498,13 @@ input[type="radio"]:checked + label::after {
 
     width: 620px;
 
-    -webkit-box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
+    -webkit-box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
 
-            box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
+            box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+}
+
+.modal-status-show {
+    display: block;
 }
 
 .modal-status::before {
@@ -2541,7 +2566,7 @@ input[type="radio"]:checked + label::after {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0px 80px 37px 80px;
+    padding: 0 80px 37px 80px;
 }
 
 .modal-status-buttons a {
